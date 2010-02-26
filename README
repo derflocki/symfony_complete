@@ -1,0 +1,23 @@
+Bash Completition for symfony
+
+AUTHOR
+Fran Naranjo
+Twitter: @tatai
+
+Please, visit homepage at http://github.com/biko2/symfony_completition
+
+INTRODUCTION
+Reads from your symfony script all commands posibilities and allows bash autocompletition when yo tab twice on command line after symfony command
+
+NOTES
+Perl installed is required
+Works with symfony 1.4
+
+INSTALL
+Typical installation is made by copying symfony_completition to /etc/bash_completion.d but only if you have full system access.
+
+It is possible to have this script in your own account by copying symfony_completition to a place in your account (say ~/symfony_completition) and add the following line to your .bash_profile (typically at ~/.bash_profile, you can create it if it does not exist):
+
+if [ -e ~/symfony_completition ];
+	. ~/symfony_completition
+fi
