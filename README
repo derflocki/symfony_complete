@@ -10,7 +10,7 @@ INTRODUCTION
 Reads from your symfony script all commands posibilities and allows bash autocomplete when yo tab twice on command line after symfony command
 
 NOTES
-Perl installed is required
+Perl installed is required (http://www.perl.org/get.html)
 Works with symfony 1.4
 
 INSTALL
