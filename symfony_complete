@@ -4,9 +4,9 @@ _symfony()
 {
 	local cmds cur colonprefixes
 
-	cmds="$( echo "" | ${COMP_WORDS[0]} | perl -ne 'if( /^([a-zA-Z0-9\-]+)/ ) { $first = $1; } elsif ( /^\s*(:[a-zA-Z0-9\-]+)/ ) { print $first . $1 . "\n"; }' )"
+	cmds="$( echo "" | ${COMP_WORDS[0]} 2>/dev/null| perl -ne 'if( /^([a-zA-Z0-9\-]+)/ ) { $first = $1; } elsif ( /^\s*(:[a-zA-Z0-9\-]+)/ ) { print $first . $1 . "\n"; }' )"
 	COMPREPLY=()
-	cur=${COMP_WORDS[COMP_CWORD]}
+	cur=`_get_cword ":"`
 	# Work-around bash_completion issue where bash interprets a colon as a separator.
 	# Work-around borrowed from the darcs work-around for the same issue.
 	colonprefixes=${cur%"${cur##*:}"}
